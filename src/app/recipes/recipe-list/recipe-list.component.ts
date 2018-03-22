@@ -9,7 +9,8 @@ import {Recipe} from '../Recipe';
 export class RecipeListComponent implements OnInit {
   riceUrl = 'https://cdn2.tmbi.com/TOH/Images/Photos/37/300x300/Cheesy-Cheddar-Broccoli-Casserole_EXPS_SDFM17_28900_C09_30_6b.jpg';
   recipes: Recipe[] = [
-    new Recipe('Rice', 'first rice recipe', this.riceUrl)
+    new Recipe('Rice', 'first rice recipe', this.riceUrl),
+    new Recipe('FriedRice', 'second rice recipe', this.riceUrl)
   ];
   @Output() selectedFromListEmitter = new EventEmitter<Recipe>() ;
 

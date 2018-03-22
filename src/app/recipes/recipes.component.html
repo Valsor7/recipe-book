@@ -3,7 +3,10 @@
     <app-recipe-list (selectedFromListEmitter)="selectedRecipe = $event"></app-recipe-list>
   </div>
   <div class="col-md-7">
-    <app-recipe-detail [detailsRecipe]="selectedRecipe" *ngIf="selectedRecipe; else emptyInfo"></app-recipe-detail>
+    <app-recipe-detail
+      [detailsRecipe]="selectedRecipe"
+      *ngIf="selectedRecipe; else emptyInfo">
+    </app-recipe-detail>
     <ng-template #emptyInfo>
       <p>No selected recipe</p>
     </ng-template>
